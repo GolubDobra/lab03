@@ -3,7 +3,7 @@
 Данная лабораторная работа посвещена изучению систем контроля версий на примере **Git**.
 
 ```bash
-$ open https://git-scm.com
+$ open https://git-scm.com   # открыть сайт
 ```
 
 ## Tasks
@@ -55,6 +55,7 @@ $ mkdir sources   #создаем новый каталог
 $ mkdir include   #создаем новый каталог
 $ mkdir examples  #создаем новый каталог
 ```
+
 Создаем и записываем новый файл printf.cpp в папке  sources
 
 ```
@@ -70,6 +71,7 @@ void print(const std::string& text, std::ofstream& out) {
 }
 EOF
 ```
+
 Создаем и записываем новый файл printf.hpp в папке  include
 
 ```ShellSession
@@ -82,6 +84,7 @@ void print(const std::string& text, std::ostream& out = std::cout);
 void print(const std::string& text, std::ofstream& out);
 EOF
 ```
+
 Создаем и записываем новый файл example1.cpp в папке  examples
 
 ```ShellSession
@@ -93,6 +96,7 @@ int main(int argc, char** argv) {
 }
 EOF
 ```
+
 Создаем и записываем новый файл example2.cpp в папке  examples
 
 ```ShellSession
@@ -110,6 +114,8 @@ EOF
 ```ShellSession
 $ edit README.md    # редактируем README.md
 ```
+
+Отправляем последние изменения на GitHub сервер
 
 ```ShellSession
 $ git status    # показывает статус рабочего дерева
