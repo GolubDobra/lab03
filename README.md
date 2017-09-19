@@ -54,6 +54,10 @@ $ git log     # история фиксаций
 $ mkdir sources   #создаем новый каталог
 $ mkdir include   #создаем новый каталог
 $ mkdir examples  #создаем новый каталог
+```
+Создаем и записываем новый файл printf.cpp в папке  sources
+
+```
 $ cat > sources/print.cpp <<EOF  
 #include <print.hpp>
 
@@ -66,6 +70,7 @@ void print(const std::string& text, std::ofstream& out) {
 }
 EOF
 ```
+Создаем и записываем новый файл printf.hpp в папке  include
 
 ```ShellSession
 $ cat > include/print.hpp <<EOF   
@@ -77,6 +82,7 @@ void print(const std::string& text, std::ostream& out = std::cout);
 void print(const std::string& text, std::ofstream& out);
 EOF
 ```
+Создаем и записываем новый файл example1.cpp в папке  examples
 
 ```ShellSession
 $ cat > examples/example1.cpp <<EOF    
@@ -87,6 +93,7 @@ int main(int argc, char** argv) {
 }
 EOF
 ```
+Создаем и записываем новый файл example2.cpp в папке  examples
 
 ```ShellSession
 $ cat > examples/example2.cpp <<EOF   
@@ -114,13 +121,13 @@ $ git push origin master  #  вталкивает данные текущей в
 ## Report
 
 ```ShellSession
-$ cd ~/workspace/labs/  # переходим по заданному пути
-$ export LAB_NUMBER=03  # включаем в дочерние процессы
-$ git clone https://github.com/tp-labs/lab${LAB_NUMBER} tasks/lab${LAB_NUMBER}  # клонируем репозиторий
-$ mkdir reports/lab${LAB_NUMBER}    #создаем новый каталог
-$ cp tasks/lab${LAB_NUMBER}/README.md reports/lab${LAB_NUMBER}/REPORT.md  # копируем файлы в другие каталоги
-$ cd reports/lab${LAB_NUMBER} # переходим по заданному пути
-$ edit REPORT.md    # редактируем README.md
+$ cd ~/workspace/labs/  
+$ export LAB_NUMBER=03 
+$ git clone https://github.com/tp-labs/lab${LAB_NUMBER} tasks/lab${LAB_NUMBER}  
+$ mkdir reports/lab${LAB_NUMBER}   
+$ cp tasks/lab${LAB_NUMBER}/README.md reports/lab${LAB_NUMBER}/REPORT.md  
+$ cd reports/lab${LAB_NUMBER} 
+$ edit REPORT.md    
 $ gistup -m "lab${LAB_NUMBER}"
 ```
 
